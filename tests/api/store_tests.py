@@ -28,7 +28,7 @@ class StoreApiTestCase(OverholtApiTestCase):
     def test_create_store(self):
         r = self.jpost('/stores', data={
             'name': 'My Store',
-            'address': '123 Overholt Drive',
+            'address': '123 backend Drive',
             'city': 'Brooklyn',
             'state': 'New York',
             'zip_code': '12345'

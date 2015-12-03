@@ -6,7 +6,7 @@
     api tests package
 """
 
-from overholt.api import create_app
+from backend.api import create_app
 
 from .. import OverholtAppTestCase, settings
 

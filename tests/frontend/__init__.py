@@ -6,7 +6,7 @@
     frontend tests package
 """
 
-from overholt.frontend import create_app
+from backend.frontend import create_app
 
 from .. import OverholtAppTestCase, settings
 

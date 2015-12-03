@@ -8,7 +8,7 @@
 
 from unittest import TestCase
 
-from overholt.core import db
+from backend.core import db
 
 from .factories import UserFactory
 from .utils import FlaskTestCaseMixin

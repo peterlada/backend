@@ -3,7 +3,7 @@
     tests.factories
     ~~~~~~~~~~~~~~~
 
-    Overholt test factories module
+    backend test factories module
 """
 
 from datetime import datetime
@@ -11,8 +11,8 @@ from datetime import datetime
 from factory import Factory, Sequence, LazyAttribute
 from flask_security.utils import encrypt_password
 
-from overholt.core import db
-from overholt.models import *
+from backend.core import db
+from backend.models import *
 
 
 def create_sqlalchemy_model_function(class_to_create, *args, **kwargs):
@@ -32,7 +32,7 @@ class RoleFactory(Factory):
 
 class UserFactory(Factory):
     FACTORY_FOR = User
-    email = Sequence(lambda n: 'user{0}@overholt.com'.format(n))
+    email = Sequence(lambda n: 'user{0}@backend.com'.format(n))
     password = LazyAttribute(lambda a: encrypt_password('password'))
     last_login_at = datetime.utcnow()
     current_login_at = datetime.utcnow()
@@ -46,8 +46,8 @@ class UserFactory(Factory):
 class StoreFactory(Factory):
     FACTORY_FOR = Store
     name = Sequence(lambda n: 'Store Number {0}'.format(n))
-    address = '123 Overholt Alley'
-    city = 'Overholt'
+    address = '123 backend Alley'
+    city = 'backend'
     state = 'New York'
     zip_code = '12345'
 

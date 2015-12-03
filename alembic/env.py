@@ -8,9 +8,9 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 from logging.config import fileConfig
 
-from overholt.models import *
-from overholt.core import db
-from overholt.api import create_app
+from backend.models import *
+from backend.core import db
+from backend.api import create_app
 
 app = create_app()
 

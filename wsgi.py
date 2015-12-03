@@ -3,13 +3,13 @@
     wsgi
     ~~~~
 
-    overholt wsgi module
+    backend wsgi module
 """
 
 from werkzeug.serving import run_simple
 from werkzeug.wsgi import DispatcherMiddleware
 
-from overholt import api, frontend
+from backend import api, frontend
 
 application = DispatcherMiddleware(frontend.create_app(), {
     '/api': api.create_app()

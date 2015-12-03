@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Overholt documentation build configuration file, created by
+# backend documentation build configuration file, created by
 # sphinx-quickstart on Tue Jun 25 13:03:08 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Overholt'
+project = u'backend'
 copyright = u'2013, Matt Wright'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -194,7 +194,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Overholt.tex', u'Overholt Documentation',
+  ('index', 'backend.tex', u'backend Documentation',
    u'Matt Wright', 'manual'),
 ]
 
@@ -224,7 +224,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'overholt', u'Overholt Documentation',
+    ('index', 'backend', u'backend Documentation',
      [u'Matt Wright'], 1)
 ]
 
@@ -238,8 +238,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Overholt', u'Overholt Documentation',
-   u'Matt Wright', 'Overholt', 'One line description of project.',
+  ('index', 'backend', u'backend Documentation',
+   u'Matt Wright', 'backend', 'One line description of project.',
    'Miscellaneous'),
 ]
 
