@@ -13,7 +13,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = env('HOST', '0.0.0.0')
 PORT = env('PORT', 8888)
 
-SQLALCHEMY_DATABASE_URI = env('DATABASE_URL', 'postgresql://be@localhost/backend')
+SQLALCHEMY_DATABASE_URI = env('DATABASE_URL', 'postgresql://be:password@127.0.0.1/backend')
 CELERY_BROKER_URL = 'redis://33.33.33.10:6379/0'
 
 MAIL_DEFAULT_SENDER = 'info@backend.com'

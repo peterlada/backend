@@ -10,7 +10,7 @@ from flask import Blueprint, request
 
 from ..forms import NewStoreForm, UpdateStoreForm
 from ..services import stores as _stores, products as _products, users as _users
-from ..tasks import send_manager_added_email, send_manager_removed_email
+# from ..tasks import send_manager_added_email, send_manager_removed_email
 from . import OverholtFormError, route
 
 bp = Blueprint('stores', __name__, url_prefix='/stores')
@@ -83,7 +83,7 @@ def managers(store_id):
 def add_manager(store_id, user_id):
     store, manager = _stores.add_manager(_stores.get_or_404(store_id),
                                          _users.get_or_404(user_id))
-    send_manager_added_email.delay(manager.email)
+    # send_manager_added_email.delay(manager.email)
     return store
 
 
@@ -91,5 +91,5 @@ def add_manager(store_id, user_id):
 def remove_manager(store_id, user_id):
     store, manager = _stores.remove_manager(_stores.get_or_404(store_id),
                                             _users.get_or_404(user_id))
-    send_manager_removed_email.delay(manager.email)
+    # send_manager_removed_email.delay(manager.email)
     return None, 204

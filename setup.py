@@ -27,7 +27,6 @@ requires = [
     'anyjson',
     'billiard',
     'blinker',
-    'celery',
     'cssmin',
     'docutils',
     'factory-boy',
